@@ -8,7 +8,7 @@
 
 ### 2. [Level 2](https://github.com/yjydev/Programmers_Problem_Solving/tree/main/JavaScript/Level%202)        
 
-
+- 22.05.30 javascript로 풀이 시작          
 
 
 
