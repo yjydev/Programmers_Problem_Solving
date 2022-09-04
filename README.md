@@ -17,8 +17,8 @@
 - 22.08.22 8월 3주차부터 주차별 정리 시작     
 
 
-### 3. Level 3    
- - 22.08.06 기업코딩테스트 대비용으로 javascript 활용하여 풀이     
+### 3. [Level 3](https://github.com/yjydev/Programmers_Problem_Solving/tree/main/JavaScript/Level_3)              
+ - 22.08.06 기업코딩테스트 대비용으로 javascript 활용하여 풀이시작     
 
 
 
