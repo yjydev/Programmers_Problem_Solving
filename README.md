@@ -18,7 +18,7 @@
 
 
 ### 3. [Level 3](https://github.com/yjydev/Programmers_Problem_Solving/tree/main/JavaScript/Level_3)              
- - 22.08.06 기업코딩테스트 대비용으로 javascript 활용하여 풀이시작     
+ - ~~22.08.06 기업코딩테스트 대비용으로 javascript 활용하여 풀이시작~~  **(level 2 모두 풀때까지 중단)**        
 
 
 
