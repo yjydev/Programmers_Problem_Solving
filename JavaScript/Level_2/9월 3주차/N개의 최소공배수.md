@@ -2,7 +2,22 @@
 - 풀이   
 
 ```javascript    
-
+function solution(arr) {
+    let cnt = 1, flag = false;
+    while(!flag)
+    {
+        cnt++;
+        for(let i = 1; i < arr.length; ++i){
+            if((arr[0] * cnt) % arr[i]  === 0){
+                flag = true;
+            } else {
+                flag = false;
+                break;
+            }
+        }
+    }
+    return arr[0] * cnt;
+}
 ```    
 
 - 이번 문제는 n개의 숫자를 담은 배열 `arr`이 주어질 때, 이 배열의 수들의 최소공배수를 리턴하는 문제였다.   
