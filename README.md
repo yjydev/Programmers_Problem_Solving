@@ -16,7 +16,7 @@
 - 22.05.30 javascript로 풀이 시작          
 - 22.06.20 javascript 스터디 풀이 시작      
 - 22.08.22 8월 3주차부터 주차별 정리 시작     
-- ~~22.09.30 python으로 다시 풀이 시작~~ **(python 연습 끝날때까지 중단)**           
+- 22.10.08 python으로 다시 풀이 시작      
 
 
 ### 3. [Level 3](https://github.com/yjydev/Programmers_Problem_Solving/tree/main/JavaScript/Level_3)              
