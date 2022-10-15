@@ -22,7 +22,6 @@
 ### 3. [Level 3](https://github.com/yjydev/Programmers_Problem_Solving/tree/main/JavaScript/Level_3)              
  - ~~22.08.06 기업코딩테스트 대비용으로 javascript 활용하여 풀이시작~~        
  - [2022 카카오 블라인드 코딩테스트 대비 연습](https://tech.kakao.com/2022/01/14/2022-kakao-recruitment-round-1/)      
- 
  - 22.10.15 python 활용하여 풀이시작      
 
 
