@@ -27,6 +27,8 @@
  - 22.10.15 python 활용하여 풀이시작      
 
 
+### 4. [SQL 고득점 Kit](https://school.programmers.co.kr/learn/challenges?tab=sql_practice_kit)     
+ - 22.10.25 풀이 시작     
 
 
 
