@@ -28,7 +28,8 @@
 
 
 ### 4. [SQL 고득점 Kit](https://school.programmers.co.kr/learn/challenges?tab=sql_practice_kit)     
- - 22.10.25 풀이 시작     
+ - 22.10.25 풀이 시작        
+ - 정답 풀이를 올리는 것은 문제 설명 의미가 없을 것 같아 풀기 위한 개념, 함수 위주로 정리    
 
 
 
