@@ -49,6 +49,81 @@
   - `ORDER BY` 절은 항상 맨 마지막에 작성되어야 한다.    
 
   
+<br>     
+
+## JOIN    
+
+- 여러 테이블을 특정 칼럼을 기준으로 병합            
+
+### (INNER) JOIN    
+
+- 기본적으로 `JOIN = INNER JOIN` 으로 `INNER` 은 생략 가능하며, 조인하는 테이블 **모두에 값이 있는 행**을 반환한다.      
+
+  ```mysql    
+  SELECT (칼럼명) FROM (테이블1 이름) (테이블1 약칭)
+  JOIN (테이블2 이름) (테이블2 약칭) ON (조인 조건) [WHERE (조건)] [GROUP BY (그룹화할 칼럼명)] [...] [ORDER BY (정렬 기준 칼럼)]
+  ```     
+
+  - 만약, `TABLE_1` 테이블을 `T1` 약칭으로, `TABLE_2` 테이블을 `T2` 약칭으로 하여 `동일 ID` 값으로 `JOIN` 한다고 하면,     
+    
+    ```mysql    
+    SELECT * FROM TABLE_1 T1 JOIN TABLE_2 T2 ON T1.ID = T2.ID
+    ```          
+    
+    로 작성한다.      
+    
+  - `JOIN ... ON ...` 이후로 동일하게 `WHERE` 조건절이나 `GROUP BY` 그룹화 등등 다양하게 조합할 수 있다.     
+    
+  - 2개뿐만 아니라 그 이상의 테이블을 조인할 수도 있다.    
+
+  - 동일한 테이블끼리 조인하는 경우는 `SELF JOIN` 이라고 한다. 방법은 `INNER JOIN`과 동일하다.        
+
+
+<br>    
+
+### LEFT/RIGHT (OUTER) JOIN      
+
+- 반대쪽의 데이터 여부와 무관하게 선택된 방향에 데이터가 있으면 행 반환        
+
+  ```mysql    
+  SELECT T1.NAME, T2.NAME FROM TABLE_1 T1 (LEFT/RIGHT) JOIN TABLE_2 T2 ON T1.ID = T2.ID     
+  ```     
+
+  - `(INNER) JOIN` 과 마찬가지로 `LEFT/RIGHT (OUTER) JOIN` 에서 `OUTER` 생략가능     
+  
+  - `IFNULL` 함수로 데이터가 없을 때 대신 출력할 문구 설정도 가능     
+
+    ```mysql     
+    SELECT IFNULL(T1.NAME, 'T1_NONE'), IFNULL(T2.NAME, 'T2_NONE') FROM TABLE_1 T1 LEFT JOIN TABLE_2 T2 ON T1.ID = T2.ID    
+    ```      
+
+  - LEFT JOIN      
+
+    - 반대쪽에 데이터가 없어도 **왼쪽(LEFT)에 데이터가 있으면 행 반환**       
+    
+    - `T1.ID = T2.ID` 조건을 만족하는 `T2.NAME` 데이터가 없더라도 `T1.NAME` 이 있으면     
+      
+      `T2.NAME`은 NULL 값을 가지고 `T1.NAME` 값을 출력하면서 행 반환       
+
+  - RIGHT JOIN      
+
+    - 반대쪽에 데이터가 없어도 **오른쪽(RIGHT)에 데이터가 있으면 행 반환**         
+    
+    - `T1.ID = T2.ID` 조건을 만족하는 `T1.NAME` 데이터가 없더라도 `T2.NAME` 이 있으면   
+      
+      `T1.NAME` 은 NULL 값을 가지고 `T2.NAME` 값을 출력하면서 행 반환    
+
+<br>    
+
+### CROSS JOIN    
+
+- 조건 없이 모든 행 반환     
+
+  ```mysql     
+  SELECT T1.NAME, T2.NAME FROM TABLE_1 T1 CROSS JOIN TABLE_2 T2  
+  ```    
+  
+  - T1 이 총 9개 행이고 T2 가 총 10개 행이라면 `CROSS JOIN` 했을 때, 총 90개 행이 반환된다.    
   
 
 <br>    
