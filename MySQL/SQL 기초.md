@@ -126,7 +126,40 @@
   - T1 이 총 9개 행이고 T2 가 총 10개 행이라면 `CROSS JOIN` 했을 때, 총 90개 행이 반환된다.    
   
 
-<br>    
+<br>       
+
+## 집합      
+
+- `JOIN` 과 달리 위 아래로 모든 행을 나열     
+
+  - `JOIN` 은 `A X B` 형태이고, `UNION` `UNION ALL` 등의 합집합은 그냥 위 아래로 모든 항을 쭉 열거하는 형태   
+
+- 서브 쿼리를 활용할 수도 있다.   
+
+  ```mysql     
+  SELECT * FROM ( SELECT NAME, ID FROM T1 WHERE NAME = '%I%' 
+                  UNION ALL 
+                  SELECT NAME, ID FROM T2 WHERE NAME = '%I%' ) A 
+            ORDER BY NAME
+  ```     
+
+### UNION     
+
+- 중복을 제거한 합집합 결과 반환    
+
+  ```mysql    
+  SELECT (칼럼명) FROM (테이블명) [WHERE 조건절] UNION SELECT (칼럼명) FROM (테이블명) [...]   
+  ```       
+  
+### UNION ALL    
+
+- 중복을 제거하지 않은 합집합 결과 반환    
+
+  ```mysql    
+  SELECT (칼럼명) FROM (테이블명) [WHERE 조건절] UNION ALL SELECT (칼럼명) FROM (테이블명) [...]   
+  ```      
+
+<br>     
   
 ## NULL값 처리    
 
