@@ -48,6 +48,24 @@
   
   - `ORDER BY` 절은 항상 맨 마지막에 작성되어야 한다.    
 
+<br>     
+
+## 서브쿼리    
+
+- 하나의 SQL문(메인 쿼리) 내부에 존재하는 또 하나의 SQL문(서브 쿼리) 의미    
+
+  ```mysql     
+  SELECT (칼럼명), (SELECT COUNT(*) FROM T1 WHERE ID = 3) AS COUNT FROM (테이블명) [WHERE (조건)] [...]
+  ```     
+  
+  - MYSQL에선 서브 쿼리를 작성할 때 서브 쿼리명을 반드시 지정해줘야 하고, 지정하지 않으면 `ambiguous` 오류가 발생한다.      
+    ```mysql     
+    ...
+    (SELECT * FROM T2 WHERE ID = 1) A      
+    ...
+    ```     
+    
+    - 오로지 구분을 위한 것이기 때문에 위처럼 `A` 등의 아무 이름이나 지정해도 무관하다.      
   
 <br>     
 
